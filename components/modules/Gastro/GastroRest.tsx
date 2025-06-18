@@ -116,14 +116,30 @@ const RestauracjaDzikaRoza = ({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16 px-4 sm:px-0">
           <div>
             <AnimatedDecorativeBar />
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="uppercase text-4xl md:text-5xl font-semibold tracking-wider mb-10"
-            >
-              Restauracja Dzika Róża
-            </motion.h1>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-8">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="uppercase text-4xl md:text-5xl font-semibold tracking-wider"
+              >
+                Restauracja Dzika Róża
+              </motion.h1>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <Image
+                  src="/rest-logos/dzika.png"
+                  alt="Logo Restauracji Dzika Róża"
+                  width={220}
+                  height={45}
+                  className="hidden sm:block flex-shrink-1"
+                />
+              </motion.div>
+            </div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

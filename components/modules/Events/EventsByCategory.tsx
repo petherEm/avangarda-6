@@ -13,6 +13,7 @@ import {
   TreePine,
 } from "lucide-react";
 import { AnimatedDecorativeBar } from "@/components/animated-decorative-bar";
+import GenericCTA from "@/components/generic-cta";
 
 interface EventTypesProps {
   dict?: any;
@@ -262,38 +263,12 @@ export default function EventTypes({ dict, lang = "pl" }: EventTypesProps) {
         </div>
 
         {/* Contact Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
-          className="text-center px-4 sm:px-0"
-        >
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="h-px flex-1 bg-avangarda"></div>
-            <h2 className="text-3xl font-semibold text-center">
-              Skontaktuj się z nami
-            </h2>
-            <div className="h-px flex-1 bg-avangarda"></div>
-          </div>
-
-          <p className="text-lg mb-6 max-w-3xl mx-auto leading-relaxed">
-            Gotowy na organizację swojego wymarzonego wydarzenia? Skontaktuj się
-            z nami, aby omówić szczegóły i zarezerwować termin.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button variant="outline" className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              {phoneNumber}
-            </Button>
-
-            <Button variant="outline" className="flex items-center gap-2">
-              <Download className="h-4 w-4" />
-              Pobierz ofertę
-            </Button>
-          </div>
-        </motion.div>
+        <GenericCTA
+          header="Skontaktuj się z nami"
+          leadText="Masz pytania lub chcesz omówić szczegóły współpracy? Skontaktuj się z nami telefonicznie lub pobierz naszą szczegółową ofertę."
+          phoneNumber="+48 574 383 282"
+          downloadOffer="Pobierz ofertę"
+        />
       </div>
     </div>
   );

@@ -8,9 +8,6 @@ import {
   Calendar,
   Clock,
   Users,
-  ChefHat,
-  Wine,
-  MapPin,
   Star,
   Quote,
   Phone,
@@ -40,7 +37,7 @@ const testimonials = [
 
 export default function RestaurantFort() {
   return (
-    <Container className="relative mt-6 sm:mt-6 md:mt-4 lg:mt-0 mb-6 lg:mb-0 text-white w-full lg:py-20">
+    <Container className="relative mt-6 sm:mt-6 md:mt-4 lg:mt-0 mb-6 lg:mb-0 text-white w-full py-14 lg:py-20">
       {/* Background Image - Add z-index to push it behind content */}
       <div className="absolute inset-0 -z-10">
         <BackgroundLogoBottomDark position="right" />
@@ -50,14 +47,32 @@ export default function RestaurantFort() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16 px-4 sm:px-0">
           <div>
             <AnimatedDecorativeBar />
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="uppercase text-4xl md:text-5xl font-semibold tracking-wider mb-8 text-white"
-            >
-              Klub Coola
-            </motion.h1>
+
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 sm:justify-between mb-8">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="uppercase text-4xl md:text-5xl font-semibold tracking-wider text-white"
+              >
+                Klub Coola
+              </motion.h1>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <Image
+                  src="/rest-logos/coola_light.png"
+                  alt="Logo Klub Coola"
+                  width={120}
+                  height={45}
+                  className="hidden sm:block flex-shrink-1"
+                />
+              </motion.div>
+            </div>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

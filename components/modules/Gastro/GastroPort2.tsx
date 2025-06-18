@@ -8,9 +8,6 @@ import {
   Calendar,
   Clock,
   Users,
-  ChefHat,
-  Wine,
-  MapPin,
   Star,
   Quote,
   Phone,
@@ -62,14 +59,30 @@ export default function GastroBarPrzystan() {
           </motion.div>
           <div>
             <AnimatedDecorativeBar />
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="uppercase text-4xl md:text-5xl font-semibold tracking-wider mb-8 text-primary"
-            >
-              Bar Przystań Avangarda
-            </motion.h1>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-8">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="uppercase text-4xl md:text-5xl font-semibold tracking-wider text-primary"
+              >
+                Bar Przystań Avangarda
+              </motion.h1>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <Image
+                  src="/rest-logos/przystan.png"
+                  alt="Logo Bar Przystań"
+                  width={180}
+                  height={45}
+                  className="hidden sm:block flex-shrink-1"
+                />
+              </motion.div>
+            </div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

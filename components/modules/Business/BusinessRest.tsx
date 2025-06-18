@@ -98,28 +98,28 @@ export default function BusinessEntertainment({
             className="w-full"
             onValueChange={setSelectedTab}
           >
-            <TabsList className="w-full max-w-2xl mx-auto mb-8 bg-white p-1 grid grid-cols-4">
+            <TabsList className="w-full max-w-2xl mx-auto mb-8 bg-white p-1 grid grid-cols-4 gap-2 rounded-none border-b-1 border-avangarda">
               <TabsTrigger
                 value="club"
-                className="data-[state=active]:bg-transparent data-[state=active]:text-avangarda data-[state=active]:border-b-2 data-[state=active]:border-b-avangarda rounded-none"
+                className="data-[state=active]:bg-avangarda data-[state=active]:text-white rounded-none"
               >
                 Klub Coola
               </TabsTrigger>
               <TabsTrigger
                 value="outdoor"
-                className="data-[state=active]:bg-transparent data-[state=active]:text-avangarda data-[state=active]:border-b-2 data-[state=active]:border-b-avangarda rounded-none"
+                className="data-[state=active]:bg-avangarda data-[state=active]:text-white rounded-none"
               >
                 Outdoor
               </TabsTrigger>
               <TabsTrigger
                 value="fort"
-                className="data-[state=active]:bg-transparent data-[state=active]:text-avangarda data-[state=active]:border-b-2 data-[state=active]:border-b-avangarda rounded-none"
+                className="data-[state=active]:bg-avangarda data-[state=active]:text-white rounded-none"
               >
                 Fort No. 4
               </TabsTrigger>
               <TabsTrigger
                 value="przystan"
-                className="data-[state=active]:bg-transparent data-[state=active]:text-avangarda data-[state=active]:border-b-2 data-[state=active]:border-b-avangarda rounded-none"
+                className="data-[state=active]:bg-avangarda data-[state=active]:text-white rounded-none"
               >
                 Bar Przystań
               </TabsTrigger>
